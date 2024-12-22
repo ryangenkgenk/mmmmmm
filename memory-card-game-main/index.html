@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ========================= Game Over ============================= -->
+    <div class="game-over">
+      <div class="game-result">
+        <h2 class="title">Congradulation You <span> Win! </span></h2>
+        <div class="rating">
+          <i class="fa-solid fa-star first"></i>
+          <i class="fa-solid fa-star second"></i>
+          <i class="fa-solid fa-star third"></i>
+        </div>
+        <div class="btn">
+          <button class="title">Your Score</button>
+          <button id="score">00</button>
+          <i class="fa-solid fa-rotate-right retry"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ========================= Game Play ============================= -->
+      <div class="game-play">
+        <img src="img/logo.png" alt="" />
+        <button id="play">Play</button>
+      </div>
+      <!-- ========================= Game Menu ============================= -->
+      <div class="game-menu">
+        <i class="bx bx-menu" id="menu"></i>
+        <div class="logo">
+          <img src="img/logo.png" alt="" />
+        </div>
+        <div class="developed">
+          <h2>Developed By <span>@YahYa.</span></h2>
+        </div>
+        <div class="nav">
+          <div class="rank">
+            <p class="rank-title">Rank</p>
+            <i class="fa-solid fa-ranking-star rank-title"></i>
+          </div>
+          <div class="ranking">
+            <div class="header">
+              <i class="fa-solid fa-ranking-star"></i>
+              <i class="bx bx-x cancel"></i>
+            </div>
+            <h2>LeaderBoard</h2>
+            <p>high score</p>
+            <div class="leaderboard">
+              <input
+                type="text"
+                id="search"
+                placeholder="Search Your Name"
+                autocomplete="off"
+              />
+              <ul></ul>
+            </div>
+          </div>
+          <div class="pr">
+            <h3 class="show-profile user">yaxye</h3>
+            <i class="bx bxs-user-circle show-profile"></i>
+          </div>
+          <div class="profile">
+            <div class="header">
+              <i class="bx bxs-user-circle"></i>
+              <h3 class="user">yaxye</h3>
+              <i class="bx bx-x cancel"></i>
+            </div>
+            <div class="your-score">
+              <span>Your Highest Score is :</span>
+              <span class="scor"></span>
+            </div>
+            <div class="logout">
+              <i
+                class="bx bx-log-out-circle bx-flip-horizontal log-out-btn"
+              ></i>
+              <span class="log-out-btn">Log out</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========================= Game ============================= -->
+      <div class="game" id="game">
+        <div class="game-header">
+          <div class="score"></div>
+          <div class="memory-logo">
+            <h2>Memory Card Game</h2>
+            <img src="img/103228.png" alt="" />
+          </div>
+          <div class="chance-left">chances : 00</div>
+        </div>
+        <div class="game-body">
+          <ul>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-8.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-2.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-3.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-5.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-7.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-6.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-4.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-1.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-2.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-3.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-7.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-8.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-6.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-1.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-5.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="view view-front">
+                <span>?</span>
+              </div>
+              <div class="view view-back">
+                <img src="img/img-4.png" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ========================= Registration and Login ============================= -->
+      <div class="registration">
+        <form class="form" autocomplete="off" action="#">
+          <h2>Sign up</h2>
+          <div class="signin">
+            <a href="#" id="signup-to-signin">Sign in</a>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="User name" id="user-name" /><span
+              class="succes user-name"
+              ><i class="fa-sharp fa-solid fa-circle-check"></i></span
+            ><br />
+            <span class="error user-name"></span>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              autocomplete="off"
+              id="email"
+            /><span class="succes email"
+              ><i class="fa-sharp fa-solid fa-circle-check"></i></span
+            ><br />
+            <span class="error email"></span>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Create password"
+              id="password"
+            /><span class="eye"><i class="fa-regular fa-eye-slash"></i></span
+            ><br />
+            <span class="error password"></span>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Confirm password"
+              id="confirm-pass"
+            /><span class="eye"><i class="fa-regular fa-eye-slash"></i></span
+            ><br />
+            <span class="error confirm-pass"></span>
+          </div>
+          <div class="btn">
+            <button type="submit" id="btn">Create</button>
+          </div>
+        </form>
+      </div>
+      <!-- login  -->
+      <div class="log-in">
+        <form class="form" autocomplete="off" action="#">
+          <h2>Sign in</h2>
+          <div class="signin">
+            <a href="#" id="signin-to-signup">Sign up</a>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="User name"
+              id="user-name-login"
+            /><span class="succes user-name"
+              ><i class="fa-sharp fa-solid fa-circle-check"></i></span
+            ><br />
+            <span class="error user-name"></span>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password-login"
+            /><span class="eye"><i class="fa-regular fa-eye-slash"></i></span
+            ><br />
+            <span class="error password"></span>
+          </div>
+          <div class="btn">
+            <button type="submit" id="btn log-in" class="log-in-btn">
+              Log in
+            </button>
+          </div>
+          <div class="noStorage">
+            <i class="bx bx-error-circle"></i>
+            <span>no user name and password in Storage</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
